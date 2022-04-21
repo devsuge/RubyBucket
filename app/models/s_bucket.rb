@@ -1,4 +1,4 @@
 class SBucket < ApplicationRecord
   belongs_to :user
-  belongs_to :subject
+  has_many :subjects
 end
