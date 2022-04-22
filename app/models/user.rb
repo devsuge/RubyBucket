@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :c_bucket
-  belongs_to :s_bucket
+  has_one :c_bucket
+  has_one :s_bucket
 end

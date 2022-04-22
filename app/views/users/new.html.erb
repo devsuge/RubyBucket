@@ -1,0 +1,6 @@
+<h1>Register user</h1>
+
+<%= form_with model: @user do |f|%>
+    <%= f.text_field :name, required: true%>
+    <%= f.submit %>
+<% end %>

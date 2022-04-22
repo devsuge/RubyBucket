@@ -1,4 +1,4 @@
 class Subject < ApplicationRecord
   belongs_to :course
-  has_many :s_buckets
+  belongs_to :s_buckets
 end
