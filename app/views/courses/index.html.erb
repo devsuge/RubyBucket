@@ -1,0 +1,9 @@
+<h1>Courses</h1>
+
+<%@courses.each do |course| %>
+    <div>
+        <%= link_to course.title, course_path(course) %>
+        <%= link_to 'Edit', edit_course_path(course) %>
+        <%= link_to 'Drop', course_path(course), data: {method: :DELETE, confirm: "Are you sure?"} %>
+    </div>
+<% end %>

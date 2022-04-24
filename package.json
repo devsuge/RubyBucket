@@ -7,7 +7,8 @@
     "bootstrap-icons": "^1.8.1",
     "sass": "^1.50.1",
     "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "@rails/ujs": "^6.1.5"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
