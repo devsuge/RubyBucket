@@ -35,6 +35,8 @@ class CoursesController < ApplicationController
     end
 
     def show
+        @subject = @course.subjects.build
+        @subjects = @course.subjects.order created_at: :desc
     end
 
     private
