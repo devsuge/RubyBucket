@@ -1,0 +1,21 @@
+<h1><%= @course.title %></h1>
+<% @subjects.each do |subject| %>
+    <div>
+        <%= subject.title%> |
+        <%= subject.faculty%>
+        <%= link_to "Delete", course_subject_path(@course, subject), data: {method: :delete} %>
+    </div>
+<%end%>
+
+<hr>
+<%= form_with model: [@course, @subject] do |f|%>
+    <div>
+        <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+    <div>
+        <%= f.text_field :faculty, placeholder: "Faculty" %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<%end%>

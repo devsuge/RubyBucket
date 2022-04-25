@@ -1,4 +1,6 @@
 class User < ApplicationRecord
-  belongs_to :c_bucket
-  belongs_to :s_bucket
+  has_many :c_buckets
+  has_many :s_buckets
+  has_many :courses, through: :c_buckets
+  has_many :subjects, through: :s_buckets
 end
