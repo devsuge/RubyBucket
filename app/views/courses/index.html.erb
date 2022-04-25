@@ -1,9 +1,21 @@
 <h1>Courses</h1>
 
-<%@courses.each do |course| %>
-    <div>
-        <%= link_to course.title, course_path(course) %>
-        <%= link_to 'Edit', edit_course_path(course) %>
-        <%= link_to 'Drop', course_path(course), data: {method: :DELETE, confirm: "Are you sure?"} %>
+<%= link_to 'New course', new_course_path, class: 'btn btn-primary btn-lg' %>
+<% @courses.each do |course| %>
+  <article class="card mt-3">
+    <div class="card-body">
+      <h4><%= course.title %></h2>
+
+      <section class="card-text">
+        <p class="my-2">
+          Subjects
+        </p>
+      </section>
+
+      <%= link_to 'Show', course_path(course), class: 'btn btn-primary' %> 
+      <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-secondary' %>
+      <%= link_to 'Drop', course_path(course), class: 'btn btn-danger',
+        data: {method: :delete, confirm: 'Are you sure?'} %>
     </div>
+  </article>
 <% end %>
